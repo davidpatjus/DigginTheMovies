@@ -1,0 +1,25 @@
+/* src/components/SearchBar.css */
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.searchbar-form {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-select {
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.searchbar-input {
+  padding: 0.5em;
+  flex: 1;
+}
+
+.searchbar-button {
+  padding: 0.5em;
+}

@@ -1,0 +1,41 @@
+/* src/components/Card.css */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1em;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+  
