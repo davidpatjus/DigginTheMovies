@@ -19,7 +19,7 @@ const TVShows = () => {
   return (
     <div className="tvshows-container">
       <h1>Popular TV Shows</h1>
-      <CardGrid items={tvShows} type="tvshow" />
+      <CardGrid items={tvShows} type="tvshows" />
     </div>
   );
 };

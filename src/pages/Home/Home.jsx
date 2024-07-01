@@ -27,10 +27,10 @@ const Home = () => {
     <>
       <div className="container">
         <h1>Popular Movies</h1>
-        <CardGrid items={movies} type="movie" />
+        <CardGrid items={movies} type="movies" />
 
         <h1>Popular TV Shows</h1>
-        <CardGrid items={tvShows} type="tvshow" />
+        <CardGrid items={tvShows} type="tvshows" />
 
         <h1>Popular People</h1>
         <CardGrid items={people} type="person" />

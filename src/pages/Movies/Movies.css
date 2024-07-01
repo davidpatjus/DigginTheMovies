@@ -1,0 +1,15 @@
+/* src/components/Movies/Movies.css */
+
+.movies-container {
+    padding: 20px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .movies-container h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+
+  

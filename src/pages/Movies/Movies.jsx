@@ -19,7 +19,7 @@ const Movies = () => {
   return (
     <div className="movies-container">
       <h1>Popular Movies</h1>
-      <CardGrid items={movies} type="movie" />
+      <CardGrid items={movies} type="movies" />
     </div>
   );
 };

@@ -1,6 +1,6 @@
+/* Tu CSS para .error-message */
 .error-message {
-    color: red;
-    text-align: center;
-    margin: 1em 0;
-  }
-  
+  color: red; /* Color rojo para el texto */
+  text-align: center; /* Alineación al centro */
+  margin: 1em 0; /* Márgenes superior e inferior de 1em */
+}

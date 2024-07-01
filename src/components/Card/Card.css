@@ -1,4 +1,5 @@
 /* src/components/Card/Card.css */
+
 .card {
   background-color: var(--background);
   color: var(--text);
@@ -25,8 +26,14 @@
 }
 
 .card-button {
-  color: var(--text);
+  background-color: var(--primary-color);
+  color: white;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: var(--primary-color-dark);
 }

@@ -1,0 +1,70 @@
+/* src/components/SearchBar/SearchBar.css */
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+  }
+  
+  .searchbar-form {
+    display: flex;
+    align-items: center;
+    background-color: var(--searchbar-background);
+    border-radius: 8px;
+    padding: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .searchbar-select {
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+  
+  .searchbar-input {
+    padding: 0.5em;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+  
+  .searchbar-input:focus {
+    outline: none;
+  }
+  
+  .searchbar-button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .searchbar-button:hover {
+    background-color: var(--primary-color-light);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .searchbar-form {
+      background-color: var(--searchbar-background-dark);
+    }
+  
+    .searchbar-input,
+    .searchbar-select {
+      color: var(--text-color-dark);
+    }
+  
+    .searchbar-button {
+      background-color: var(--primary-color-dark);
+    }
+  
+    .searchbar-button:hover {
+      background-color: var(--primary-color-light-dark);
+    }
+  }
+  

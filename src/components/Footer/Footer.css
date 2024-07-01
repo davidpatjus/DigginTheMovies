@@ -1,50 +1,90 @@
-/* src/components/Footer.css */
+/* src/components/Footer/Footer.css */
+
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-  }
-  
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  padding: 2rem 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+}
+
+.footer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.footer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-socials a {
+  color: var(--footer-link);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background-color: var(--footer-link-hover);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
   .footer-top {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
-  
-  .footer-photo img {
-    width: 100px;
-    height: 120px;
-    border-radius: 50%;
+
+  .footer-photo {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
-  .footer-socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0.5em;
-  }
-  
-  .footer-socials a {
-    color: white;
-    margin: 0.5em;
-    text-decoration: none;
-  }
-  
-  .footer-socials a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
-    margin-top: 1em;
-  }
-  
-  .footer-bottom p {
-    margin: 0.5em 0;
-  }
-  
+}
+
+/* Tema claro */
+[data-theme='light'] {
+  --footer-background: #ffffff; /* Fondo claro */
+  --footer-text: #000000; /* Texto claro */
+  --footer-link: #007bff; /* Color enlace claro */
+  --footer-link-hover: #0056b3; /* Color enlace claro al pasar el mouse */
+}
+
+/* Tema oscuro */
+[data-theme='dark'] {
+  --footer-background: #333333; /* Fondo oscuro */
+  --footer-text: #ffffff; /* Texto oscuro */
+  --footer-link: #1abc9c; /* Color enlace oscuro */
+  --footer-link-hover: #16a085; /* Color enlace oscuro al pasar el mouse */
+}

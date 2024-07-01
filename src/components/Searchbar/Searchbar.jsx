@@ -1,53 +1,58 @@
-// src/components/SearchBar/SearchBar.jsx
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchMovies, searchTVShows, searchPeople } from '../../services/APICalls';
-import './SearchBar.css';
+import './Searchbar.css';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
   const [searchType, setSearchType] = useState('movies');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      if (query.trim()) {
-        performSearch(query);
-      }
-    }, 300); // Espera 300 ms después de que el usuario deja de escribir
-
-    return () => clearTimeout(delayDebounceFn);
-  }, [query, searchType]);
-
-  const performSearch = async (query) => {
+  const performSearch = async (query, searchType) => {
     try {
+      setLoading(true);
+      setError('');
+
       let results;
       switch (searchType) {
         case 'movies':
           results = await searchMovies(query);
-          console.log('Movies:', results);
           break;
         case 'tvShows':
           results = await searchTVShows(query);
-          console.log('TV Shows:', results);
           break;
         case 'people':
           results = await searchPeople(query);
-          console.log('People:', results);
           break;
         default:
           results = [];
       }
+
+      if (results.length > 0) {
+        navigate(`/search/${query}/${searchType}`);
+      } else {
+        setError('No results found.');
+      }
     } catch (error) {
       console.error('Error fetching search results:', error);
+      setError('Error fetching search results. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      navigate(`/search/${query}`);
+      performSearch(query, searchType);
     }
+  };
+
+  const clearSearch = () => {
+    setQuery('');
+    setError('');
   };
 
   return (
@@ -66,11 +71,14 @@ const SearchBar = () => {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search..."
+          placeholder="Search movies, TV shows, or people..."
           className="searchbar-input"
         />
         <button type="submit" className="searchbar-button">Search</button>
+        <button type="button" onClick={clearSearch} className="searchbar-button">Clear</button>
       </form>
+      {loading && <p>Loading...</p>}
+      {error && <p className="search-error">{error}</p>}
     </div>
   );
 };

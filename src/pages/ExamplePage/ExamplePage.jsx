@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
 import SearchBar from '../../components/Searchbar/Searchbar';
 import CardGrid from '../../components/CardGrid/CardGrid';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
@@ -29,12 +27,10 @@ const ExamplePage = () => {
 
   return (
     <div>
-      <Navbar />
       <SearchBar />
       {loading && <LoadingSpinner />}
       {error && <ErrorMessage message={error} />}
       {!loading && !error && <CardGrid items={movies} type="movie" />}
-      <Footer />
     </div>
   );
 };

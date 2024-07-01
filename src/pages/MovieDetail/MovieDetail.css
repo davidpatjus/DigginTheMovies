@@ -1,8 +1,10 @@
 /* src/components/MovieDetails/MovieDetails.css */
+
 .movie-details {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  color: var(--text-dark); /* Texto oscuro por defecto */
 }
 
 .movie-details img {
@@ -10,16 +12,11 @@
   border-radius: 10px;
 }
 
-.movie-details h1 {
-  font-size: 2rem;
-  margin-top: 20px;
-}
-
-.movie-details p {
+.movie-details h1,
+.movie-details p,
+.movie-details div {
   margin-top: 10px;
   line-height: 1.5;
 }
 
-.movie-details div {
-  margin-top: 10px;
-}
+

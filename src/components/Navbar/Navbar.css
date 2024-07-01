@@ -1,13 +1,16 @@
-/* src/components/Navbar.css */
+/* src/components/Navbar/Navbar.css */
+
 :root {
   --primary-color: #6200ea;
   --secondary-color: #03dac6;
   --background-color: #121212;
   --text-color: #ffffff;
+  --text-color-light: #f0f0f0; /* Color de texto claro */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Color de sombra */
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
 }
@@ -16,16 +19,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0.5rem;
   background-color: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadido efecto de sombra */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones */
 }
 
-.navbar-brand a {
-  font-size: 1.5rem;
+.navbar-brand {
+  font-size: 1.8rem; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  transition: transform 0.3s ease-in-out; /* Transición de transformación */
+}
+
+.navbar-brand:hover {
+  transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+.navbar-brand-link {
   color: var(--text-color);
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.3s; /* Transición de color */
+}
+
+.navbar-brand-link:hover {
+  color: var(--text-color-light); /* Cambio de color al pasar el mouse */
 }
 
 .navbar-nav ul {
@@ -54,7 +72,7 @@ body {
   background-color: var(--secondary-color);
   border: none;
   color: var(--background-color);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   border-radius: 5px;

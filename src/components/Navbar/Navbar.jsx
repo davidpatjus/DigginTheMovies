@@ -10,7 +10,9 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-brand">
-        <Link to="/">Diggin The Movies</Link>
+        <Link to="/" className="navbar-brand-link">
+          Diggin The Movies
+        </Link>
       </div>
       <nav className="navbar-nav">
         <ul>
@@ -19,7 +21,7 @@ const Navbar = () => {
           <li><Link to="/movies">Movies</Link></li>
           <li><Link to="/series">TV Shows</Link></li>
           <li><Link to="/people">People</Link></li>
-          <li><button className='theme-toggle' onClick={toggleTheme}>Toggle Theme</button></li> 
+          <li><button className='theme-toggle' onClick={toggleTheme}>Toggle Theme</button></li>
         </ul>
       </nav>
     </header>

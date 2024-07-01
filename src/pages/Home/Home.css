@@ -1,54 +1,71 @@
 /* Home.css */
 
 .container {
-    padding: 20px;
-  }
-  
-  h1 {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: var(--text-dark); /* Color de texto oscuro */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #fff; /* Fondo blanco por defecto */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+}
+
+.card__info {
+  padding: 15px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color); /* Color de texto */
+}
+
+.card__date,
+.card__rating,
+.card__known-for {
+  font-size: 14px;
+  color: #666; /* Color gris oscuro */
+  margin-top: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+
   .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
+    background: var(--background-light); /* Fondo claro en modo oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en modo oscuro */
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card__img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card__info {
-    padding: 15px;
-  }
-  
+
   .card__title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #222;
+    color: var(--text-color); /* Color de título en modo oscuro */
   }
   
   .card__date,
   .card__rating,
   .card__known-for {
-    font-size: 14px;
-    color: #666;
-    margin-top: 5px;
+    color: var(--text-color); /* Color de texto secundario en modo oscuro */
   }
-  
+}

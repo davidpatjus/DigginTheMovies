@@ -1,4 +1,5 @@
-/* src/components/SearchBar.css */
+/* src/components/SearchBar/SearchBar.css */
+
 .searchbar-container {
   display: flex;
   justify-content: center;
@@ -8,18 +9,61 @@
 .searchbar-form {
   display: flex;
   align-items: center;
+  background-color: var(--background-light); /* Fondo blanco por defecto en modo claro */
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
 .searchbar-select {
   padding: 0.5em;
   margin-right: 0.5em;
+  border: 1px solid var(--text-dark); /* Borde en color oscuro */
+  border-radius: 3px;
+  background-color: var(--background-light); /* Fondo blanco por defecto en modo claro */
+  color: var(--text-dark); /* Texto oscuro en modo claro */
 }
 
 .searchbar-input {
   padding: 0.5em;
   flex: 1;
+  border: none;
+  outline: none;
+  background-color: var(--background-light); /* Fondo blanco por defecto en modo claro */
+  color: var(--text-dark); /* Texto oscuro en modo claro */
 }
 
 .searchbar-button {
-  padding: 0.5em;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color); /* Color primario */
+  color: white; /* Texto blanco por defecto */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex: 1 1;
+}
+
+.searchbar-button:hover {
+  background-color: var(--primary-color-dark); /* Color primario oscuro al hacer hover */
+}
+
+.searchbar-error {
+  color: red;
+  margin-top: 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .searchbar-button {
+    color: white; /* Texto blanco en modo oscuro */
+  }
+
+  .searchbar-button:hover {
+    background-color: var(--primary-color-dark); /* Color primario oscuro al hacer hover */
+  }
+
+  .searchbar-error {
+    color: red; /* Color rojo para el error en ambos modos */
+  }
 }
