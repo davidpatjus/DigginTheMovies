@@ -1,4 +1,4 @@
-import davidimage from '../../assets/david.jpg'
+import davidimage from '../../assets/david.jpeg'
 import './Footer.css';
 
 const Footer = () => {
