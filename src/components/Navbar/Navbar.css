@@ -1,31 +1,70 @@
+/* src/components/Navbar.css */
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #03dac6;
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-  }
-  
-  .navbar-brand a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar-nav a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.navbar-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border-radius: 5px;
+}
+
+.theme-toggle {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.theme-toggle:focus {
+  outline: none;
+}

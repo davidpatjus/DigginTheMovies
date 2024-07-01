@@ -1,41 +1,32 @@
-/* src/components/Card.css */
+/* src/components/Card/Card.css */
 .card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 1em;
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-content {
-    padding: 1em;
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-  }
-  
-  .card-button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .card-button:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--text);
+  padding: 1rem;
+  margin: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-content {
+  padding: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-button {
+  color: var(--text);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}

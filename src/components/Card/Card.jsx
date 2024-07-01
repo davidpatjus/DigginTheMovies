@@ -1,3 +1,4 @@
+// src/components/Card/Card.jsx
 import './Card.css';
 
 const Card = ({ item, type }) => {
@@ -5,8 +6,12 @@ const Card = ({ item, type }) => {
   const imagePath = poster_path || profile_path;
   const displayTitle = title || name;
 
+  const handleClick = () => {
+    window.location.href = `/${type}/${id}`;
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <img 
         src={`https://image.tmdb.org/t/p/w500/${imagePath}`} 
         alt={displayTitle} 
@@ -14,7 +19,7 @@ const Card = ({ item, type }) => {
       />
       <div className="card-content">
         <h3 className="card-title">{displayTitle}</h3>
-        <button className="card-button" onClick={() => console.log(`${type} ID: ${id}`)}>
+        <button className="card-button">
           View Details
         </button>
       </div>

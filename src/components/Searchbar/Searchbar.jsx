@@ -1,8 +1,8 @@
-// src/components/SearchBar.jsx
+// src/components/SearchBar/SearchBar.jsx
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchMovies, searchTVShows, searchPeople } from '../../services/APICalls';
-import './Searchbar.css';
+import './SearchBar.css';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');

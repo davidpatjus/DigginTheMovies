@@ -1,0 +1,26 @@
+/* src/components/PersonDetails/PersonDetails.css */
+.person-details {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .person-details img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .person-details h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  .person-details p {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .person-details div {
+    margin-top: 10px;
+  }
+  

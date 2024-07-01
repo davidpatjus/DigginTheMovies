@@ -1,3 +1,4 @@
+// src/components/CardGrid/CardGrid.jsx
 import './CardGrid.css';
 import Card from '../Card/Card';
 
